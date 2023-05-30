@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+:root{
+  --primaryColor : #2161D5;
+  --darkColor : #0B132A;
+  --greyColor : #4F5665;
+  --lightColor : #FFFFFF;
+  --footerBg : #F8F8F8;
+  --sidebarBg : #2A3042;
+  --sidebarText : #A6B0CF;
+}
+
+*{
+  font-family: 'Rubik', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  color: var(--darkColor) !important;
+}
+h1{
+  font-size: 54px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+}
+h2{
+  font-size: 54px !important;
+  line-height: .8;
+  letter-spacing: 2px;
+}
+h3{
+  font-weight: 700 !important;
+  font-size: 30px !important;
+}
+span, p{
+  color: var(--greyColor);
+}
+
+/* --------------------- BUTTON CSS --------------------- */
+.btnPrimary{
+  border: none;
+  border-radius: 55px;
+  padding: 12px 34px;
+  background: var(--primaryColor);
+  color: var(--lightColor);
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+.btnPrimary:hover{
+  box-shadow: 28px 8px 30px 8px rgba(33, 97, 213, 0.25);
+}
+.btnSecondary{
+  border: 1px solid;
+  border-color: var(--primaryColor);
+  border-radius: 55px;
+  padding: 12px 34px;
+  background: var(--lightColor);
+  color: var(--primaryColor);
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+.btnSecondary:hover{
+  background-color: var(--primaryColor);
+  color: var(--lightColor);
+  box-shadow: 28px 8px 30px 8px rgba(33, 97, 213, 0.25);
+}
+.btnLink{
+  background: none;
+  border: none;
+  color: var(--darkColor);
+  font-weight: 600;
+}
+.btnSubs{
+  border: none;
+  border-radius: 10px;
+  padding: 12px 56px;
+  background: var(--lightColor);
+  color: var(--primaryColor);
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+.btnSubs:hover{
+  box-shadow: 10px 8px 30px 4px rgba(255, 255, 255, 0.25);
+}
+
+/* --------------------- NAVBAR CSS --------------------- */
+.navbar{
+  background-color: var(--lightColor);
+}
+.navbar-collapse{
+  flex-grow: 0 !important;
+}
+.nav-link{
+  color: var(--greyColor);
+}
+.router-link-active{
+  color: var(--darkColor) !important;
+  font-weight: 700 !important;
+}
+
+/* --------------------- HEADER CSS --------------------- */
+
+
+/* --------------------- PROVIDE CSS --------------------- */
+#provide .card{
+  border-radius: 24px;
+  transition: all .3s ease-in-out;
+}
+#provide .card:hover{
+  box-shadow: 0px 0px 0px 2px #2161D5;
+}
+#provide p{
+  font-size: 14px;
+}
+
+/* --------------------- OVERVIEW CSS --------------------- */
+#overview{
+  background: url('./assets/overview-bg-dots.svg'), 
+    url('./assets/overview-bg-app-1.svg'),
+    url('./assets/overview-bg-app-2.svg'),
+    url('./assets/overview-bg-app-3.svg'),
+    var(--primaryColor);
+  background-position: right 20px top 20px, 
+    left 180px top 40px,
+    right 80px top 480px,
+    left 180px bottom 200px;
+  background-size: 120px, 360px, 420px, 360px;
+  background-repeat: no-repeat;
+  color: var(--lightColor);
+  margin-top: 160px;
+}
+#overview h3{
+  font-weight: 500 !important;
+  color: var(--lightColor) !important;
+}
+#overview span{
+  color: var(--lightColor);
+  font-size: 14px;
+}
+#overview .btnSecondary{
+  background: none;
+  color: var(--lightColor);
+  border: 1px solid;
+  border-color: var(--lightColor);
+  transition: all .3s ease-in-out;
+}
+#overview .btnSecondary:hover{
+  background: var(--lightColor);
+  color: var(--primaryColor);
+}
+#overview .overview-1{
+  margin-top: -60px;
+  margin-bottom: 300px;
+}
+#overview .overview-2, #overview .overview-3{
+  margin-bottom: 260px;
+}
+
+/* --------------------- HOW IT WORKS CSS --------------------- */
+#how-it-works .card{
+  border-radius: 24px;
+}
+#how-it-works p{
+  font-size: 14px;
+}
+
+/* --------------------- PRICING CSS --------------------- */
+#pricing p{
+  font-size: 12px;
+}
+#pricing .btnSecondary, #pricing .btnPrimary{
+  padding: 8px 34px;
+  font-size: 14px;
+}
+#pricing .card:hover{
+  box-shadow: 0px 0px 0px 2px #2161D5;
+}
+
+/* --------------------- FAQ CSS --------------------- */
+.accordion{
+  --bs-accordion-btn-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 20v-8m0 0V4m0 8h8m-8 0H4"%2F%3E%3C%2Fsvg%3E') !important;
+  --bs-accordion-btn-active-icon: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="none" stroke="%232161d5" stroke-linecap="round" stroke-width="2" d="M20 12H4"%2F%3E%3C%2Fsvg%3E') !important;
+  --bs-accordion-active-bg: none !important;
+  --bs-accordion-active-color: var(--primaryColor) !important;
+}
+.accordion-button{
+  font-weight: 600;
+}
+.accordion-button:focus{
+  box-shadow: none !important;
+}
+.accordion-item{
+  border: 1px solid !important;
+  border-radius: 0 !important;
+  border-color: gainsboro !important;
+}
+.accordion-body{
+  color: var(--greyColor);
+  line-height: 1.8;
+}
+
+/* --------------------- SUBSCRIBE CSS --------------------- */
+.subscribe{
+  background-color: var(--primaryColor);
+  border-radius: 12px;
+}
+#subscribe h3, #subscribe span{
+  color: var(--lightColor) !important;
+}
+#subscribe h3{
+  font-weight: 500 !important;
+}
+
+/* --------------------- FOOTER CSS --------------------- */
+#footer{
+  background-color: var(--footerBg);
+}
+#footer .link{
+  text-decoration: none;
+  color: var(--greyColor);
+  transition: all .3s;
+}
+#footer .link:hover{
+  color: var(--darkColor);
+}
+.social{
+  background-color: var(--primaryColor);
+  border-radius: 50%;
+}
+
+/* --------------------- ABOUT PAGE CSS --------------------- */
+#header-about .navbar{
+  background: none;
+}
+#header-about .nav-link{
+  color: var(--lightColor);
+}
+#header-about .router-link-active{
+  color: var(--lightColor) !important;
+  font-weight: 700 !important;
+}
+#header-about{
+  background: url('./assets/about-header-bg-circle.svg'), var(--primaryColor);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#header-about h2, #header-about p{
+  color: var(--lightColor) !important;
+}
+#header-about .navbar .btnLink{
+  color: var(--lightColor);
+}
+#header-about .navbar .btnSecondary{
+  background: none;
+  color: var(--lightColor);
+  border: 1px solid;
+  border-color: var(--lightColor);
+}
+#header-about .navbar .btnSecondary:hover{
+  background-color: var(--lightColor);
+  color: var(--primaryColor);
+}
+#header-about .btnSecondary:hover{
+  border: 1px solid;
+  border-color: var(--lightColor);
+}
+
+/* --------------------- QUOTES CSS --------------------- */
+#quotes{
+  background-image: url('./assets/about-body-bg-dots.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#quotes h3{
+  color: var(--primaryColor) !important;
+}
+
+/* --------------------- ADVISOR CSS --------------------- */
+#advisor h3{
+  font-weight: 500 !important;
+}
+#advisor .card{
+  border: none;
+}
+#advisor .card .card-img-top{
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 3/2;
+}
+#advisor .card img{
+  object-fit: cover;
+  transition: 2s ease;
+}
+
+/* --------------------- FIGURE SAY CSS --------------------- */
+#figure-say h3{
+  font-weight: 500 !important;
+}
+#figure-say h6{
+  margin-bottom: 0 !important;
+}
+#figure-say .card span{
+  font-size: 12px;
+}
+#figure-say .card span.comment{
+  color: var(--darkColor);
+  font-size: 14px;
+}
+
+/* --------------------- LOGIN CSS --------------------- */
+#login .sidebar{
+  background-color: #F5F6FA;
+  padding: 54px 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+#login .btnLogin{
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--primaryColor);
+  color: var(--lightColor);
+  font-weight: 600;
+}
+#login input{
+  padding: 14px 16px;
+}
+#login label{
+  font-weight: 500;
+}
+#login a{
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+#login h3{
+  font-weight: 500 !important;
+}
+
+/*     ===================     ADMIN PAGE    ===================      */
+#admin{
+  background-color: var(--footerBg);
+  font-size: 14px;
+}
+#admin .card{
+  border: none !important;
+}
+/* --------------------- SIDEBAR CSS --------------------- */
+#sidebar{
+  background-color: var(--sidebarBg);
+  color: var(--sidebarText);
+  font-size: 14px;
+}
+#sidebar .nav-link{
+  color: var(--sidebarText) !important;
+}
+#sidebar .router-link-active{
+  color: var(--lightColor) !important;
+  font-weight: 400 !important;
+  stroke: var(--lightColor) !important;
+  fill: white !important;
+}
+
+/* --------------------- TOPBAR CSS --------------------- */
+#topbar{
+  background-color: var(--lightColor);
+}
+#topbar span{
+  font-size: 14px;
+  color: var(--darkColor) !important;
+}
+#topbar .dropdown .btn{
+  height: 56px;
+}
+#topbar .btnUser{
+  background: var(--lightColor);
+  border: none;
+  padding: 6px 18px;
+  width: 100%;
+  text-align: start;
+}
+#topbar .btnUser:hover{
+  background: var(--footerBg);
+}
+
+/* --------------------- USER MANAGEMENT CSS --------------------- */
+#admin .searchBar, #admin .searchBar input{
+  background-color: var(--lightColor);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 6px 18px;
+}
+#admin .searchBar .form-control:focus{
+  box-shadow: none;
+}
+#admin .btnAdd{
+  background-color: var(--primaryColor);
+  color: var(--lightColor);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+#admin .list-group{
+  background-color: var(--lightColor);
+}
+#admin .listHeader .list-group-item{
+  font-weight: 500;
+  height: fit-content;
+}
+#admin .list-group-item{
+  border: none;
+  background: none;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+#admin .list-group-item .dropdown-menu, #admin .btn{
+  font-size: 14px;
+}
+#admin .btnLink{
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: var(--darkColor);
+  font-weight: 600;
+  transition: all .3s;
+}
+#admin .btnLink:hover, #admin .btnLink.active{
+  background: var(--primaryColor);
+  color: var(--lightColor);
+}
+#admin .pagination .page-item .page-link{
+  border: none;
+  cursor: pointer;
+  color: var(--darkColor);
+  background: none;
+  border-radius: 6px;
+}
+#admin .pagination .page-item .page-link:hover, #admin .pagination .page-item.active .page-link{
+  background-color: var(--primaryColor);
+  color: var(--lightColor);
+}
+#admin .pagination .page-item.disabled .page-link{
+  color: var(--sidebarText);
+}
+#admin .modal-header, #admin .modal-footer {
+  border-width: 0;
+}
+#admin .modal .form-control, #admin .modal .form-select{
+  font-size: 14px;
+  background-color: var(--footerBg);
+  border: none;
+  padding: 10px 18px;
+}
+
+
+
+/* --------------------- MEDIA SCREEN --------------------- */
+@media screen and (max-width: 992px) {
+  #overview{
+    background-position: right 20px top 20px, 
+      left 140px top 30px,
+      right 60px top 400px,
+      left 120px bottom 170px;
+    background-size: 100px, 300px, 340px, 300px;
+  }
+  #header-about{
+    background-size: 780px;
+  }
+  #quotes{
+    background-size: 90px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #overview{
+    background-position: right 10px top 10px, 
+      left 40px top 30px,
+      right 30px top 400px,
+      left 40px bottom 170px;
+    background-size: 80px, 240px, 280px, 240px;
+  }
+  #overview .overview-1{
+    margin-top: -60px;
+    margin-bottom: 100px;
+  }
+  #overview .overview-2, #overview .overview-3{
+    margin-bottom: 100px;
+  }
+  #quotes{
+    background-size: 60px;
+  }
+}
