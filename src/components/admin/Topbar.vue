@@ -5,8 +5,8 @@
       <button class="btn"><Icon icon="ph:moon-bold" width="24" height="24" /></button>
       <div class="dropdown">
         <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img :src="image" alt="" class="me-2 h-100"/>
-          <span style="letter-spacing: 1px;">{{ username }}</span>
+          <img :src="dataUser.image" alt="" class="me-2 h-100"/>
+          <span style="letter-spacing: 1px;">{{ dataUser.username }}</span>
           <Icon icon="ep:arrow-down" class="ms-2"/>
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
@@ -23,33 +23,24 @@
 </template>
 
 <script>
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 export default {
   name: "TopbarComp",
   components: {
     Icon
   },
+  props: {
+    dataUser: {
+      type: Object,
+      required: true
+    }
+  },
   methods: {
     logout() {
       setTimeout(() => {
-        localStorage.clear()
+        localStorage.removeItem('user')
         this.$router.push({name: 'Login'})
       }, 1000)
-    }
-  },
-  data(){
-    return {
-      username: '',
-      image: ''
-    }
-  },
-  mounted() {
-    let user = localStorage.getItem('user-info')
-    let img = localStorage.getItem('user-img')
-    this.username = user
-    this.image = img
-    if(!user){
-      this.$router.push({name: 'Login'})
     }
   }
 }

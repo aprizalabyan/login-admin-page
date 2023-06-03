@@ -1,11 +1,11 @@
 <template>
   <div id="login" class="d-flex flex-column flex-md-row">
     <div class="d-block d-md-none ms-5 my-5">
-      <a href="/"><img src="../assets/logo.svg" alt="logo" /></a>
+      <RouterLink to="/"><img src="../assets/logo.svg" alt="logo" /></RouterLink>
     </div>
     <div class="col-12 col-md-4 sidebar order-1 order-md-0">
       <div class="d-none d-md-block">
-        <a href="/"><img src="../assets/logo.svg" alt="logo" /></a>
+        <RouterLink to="/"><img src="../assets/logo.svg" alt="logo" /></RouterLink>
       </div>
       <div class="d-flex flex-column flex-sm-row flex-md-column align-items-center justify-content-center">
         <div class="col-4 col-md-12">
@@ -36,7 +36,7 @@
             <input type="password" class="form-control" name="password" v-model="formPassword" required />
           </div>
           <div class="mb-4">
-            <input type="checkbox" id="remember-me" name="remember-me" value="remember">
+            <input type="checkbox" id="remember-me" name="remember-me" value="remember" />
             <label for="remember-me" class="ms-2" style="font-weight: 400; color: var(--greyColor);">Remember Me</label>
           </div>
           <button v-if="!isLoading" class="btnLogin w-100 mt-2">Log in</button>
@@ -70,8 +70,13 @@ export default {
         .then(data => {
           if (data !== null) {
             console.log(data)
-            localStorage.setItem('user-info', data.username)
-            localStorage.setItem('user-img', data.image)
+            localStorage.setItem('user', data.token)
+            if (this.rememberMe.checked){
+              localStorage.setItem('is-remember', 'yes')
+              localStorage.setItem('username', data.username)
+            } else {
+              localStorage.setItem('is-remember', 'no')
+            }
             this.$router.push('/admin')
           } else { 
             this.warningMessage = 'Wrong username or password !'
@@ -86,12 +91,22 @@ export default {
       formUsername: '',
       formPassword: '',
       warningMessage: '',
-      isLoading: false
+      isLoading: false,
+      rememberMe: ''
     }
   },
   mounted() {
-    if (localStorage.getItem('user-info')) {
+    this.rememberMe = document.getElementById('remember-me')
+    if (localStorage.user && localStorage.user !== '') {
       this.$router.push('/admin')
+    } else {
+      if (localStorage.getItem('is-remember') === 'yes'){
+        this.rememberMe.setAttribute('checked', 'checked')
+        this.formUsername = localStorage.getItem('username')
+      } else {
+        this.rememberMe.removeAttribute('checked')
+        localStorage.removeItem('username')
+      }
     }
   }
 }
