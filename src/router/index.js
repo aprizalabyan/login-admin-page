@@ -6,7 +6,8 @@ import AdminParent from '../pages/admin/AdminParent.vue'
 import DashboardPage from '../pages/admin/Dashboard.vue'
 import UserManagementPage from '../pages/admin/UserManagement.vue'
 import BlankContentPage from '../pages/admin/BlankContent.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import VisualPage from '../pages/admin/Visual.vue'
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
@@ -45,6 +46,10 @@ const routes = [
         component: UserManagementPage
       },
       {
+        path: 'visual',
+        component: VisualPage
+      },
+      {
         path: ':pathMatch(.*)*',
         component: BlankContentPage
       },
@@ -53,7 +58,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 
