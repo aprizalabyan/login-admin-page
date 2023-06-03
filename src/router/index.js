@@ -7,7 +7,7 @@ import DashboardPage from '../pages/admin/Dashboard.vue'
 import UserManagementPage from '../pages/admin/UserManagement.vue'
 import BlankContentPage from '../pages/admin/BlankContent.vue'
 import VisualPage from '../pages/admin/Visual.vue'
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
@@ -58,7 +58,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory('/login-admin-page/'),
   routes
 })
 
