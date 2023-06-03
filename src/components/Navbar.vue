@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg py-4" id="navbar">
     <div class="container">
-      <a v-if="aboutPage" class="navbar-brand" href="/home"><img src="../assets/logo-white.svg" /></a>
-      <a v-else class="navbar-brand" href="/home"><img src="../assets/logo.svg" /></a>
+      <RouterLink v-if="aboutPage" class="navbar-brand" to="/home"><img src="../assets/logo-white.svg" /></RouterLink>
+      <RouterLink v-else class="navbar-brand" to="/home"><img src="../assets/logo.svg" /></RouterLink>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,9 +45,9 @@
 
 <script>
 export default {
-  name: 'NavbarComp',
-  props: {
-    aboutPage: Boolean
-  }
+    name: "NavbarComp",
+    props: {
+      aboutPage: Boolean
+    }
 }
 </script>

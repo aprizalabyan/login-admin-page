@@ -15,7 +15,7 @@
         </div>
         <ul class="navbar-nav">
           <li class="nav-item py-1">
-            <RouterLink to="/admin/vs" class="nav-link d-flex align-items-center"><Icon icon="ph:flower" width="20" height="20" class="me-2"/><div class="d-none d-lg-inline">Visualization</div></RouterLink>
+            <RouterLink to="/admin/visual" class="nav-link d-flex align-items-center"><Icon icon="ph:flower" width="20" height="20" class="me-2"/><div class="d-none d-lg-inline">Visualization</div></RouterLink>
           </li>
           <li class="nav-item py-1">
             <RouterLink to="/admin/cs" class="nav-link d-flex align-items-center"><Icon icon="mdi:jewel-case-outline" width="20" height="20" class="me-2"/><div class="d-none d-lg-inline">Case</div></RouterLink>
